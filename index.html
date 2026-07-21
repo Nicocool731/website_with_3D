@@ -1,31 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <title>meine erste 3D Webseite</title>
-</head>
-<body>
-    <main>  
-        <h1>Welcome to my website!</h1>
-        <p> Das Leben zeigt sich immer in viele Facetten. Dies ist meine jetzige Facette.  </p>
+  <head>
+    <title>&lt;model-viewer&gt; template</title>
+    <meta charset="utf-8">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+  </head>
+  <body>
 
-    </main>
-  
+    <div class="model-container">
+      <!-- Pilz -->
+      <div id="pilz" class="model-item">
+        <model-viewer src="mushroom/mushroom_single.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls tone-mapping="neutral" poster="mushroom/poster.webp" shadow-intensity="1.17" exposure="1.48" shadow-softness="1" auto-rotate min-camera-orbit="auto auto 20.45m" min-field-of-view="30deg">
+          <div class="progress-bar hide" slot="progress-bar">
+              <div class="update-bar"></div>
+          </div>
+          <button slot="ar-button" class="ar-button">
+            View in your space
+          </button>
+          <div class="ar-prompt">
+              <img src="mushroom/ar_hand_prompt.png">
+          </div>
+        </model-viewer>
+      </div>
 
-    <img id="shrek" src="./shrekpng.png" alt="">
-    <img id="shrek" src="./shrekpng.png" alt="">
-    <img id="shrek" src="./shrekpng.png" alt="">
-    <img id="shrek" src="./shrekpng.png" alt="">
-    <img id="shrek" src="./shrekpng.png" alt="">
-    <img id="shrek" src="./shrekpng.png" alt="">
+      <!-- Rose -->
+      <div id="rose" class="model-item">
+        <model-viewer src="rose/rose.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls tone-mapping="neutral" poster="mushroom/poster.webp" shadow-intensity="1.17" exposure="1.48" shadow-softness="1" auto-rotate min-camera-orbit="auto auto 20.45m" min-field-of-view="30deg" autoplay>
+          <div class="progress-bar hide" slot="progress-bar">
+              <div class="update-bar"></div>
+          </div>
+          <button slot="ar-button" class="ar-button">
+            View in your space
+          </button>
+          <div class="ar-prompt">
+              <img src="mushroom/ar_hand_prompt.png">
+          </div>
+        </model-viewer>
+      </div>
+    </div>
 
-    
-    
-
-
-    <script src="./soundscript.js"></script>
-
-</body>
+    <script src="./script.js"></script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.3.1/model-viewer.min.js"></script>
+  </body>
 </html>
