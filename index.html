@@ -9,37 +9,60 @@
   </head>
   <body>
 
-    <div class="model-container">
-      <!-- Pilz -->
-      <div id="pilz" class="model-item">
-        <model-viewer src="mushroom/mushroom_single.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls tone-mapping="neutral" poster="mushroom/poster.webp" shadow-intensity="1.17" exposure="1.48" shadow-softness="1" auto-rotate min-camera-orbit="auto auto 20.45m" min-field-of-view="30deg">
-          <div class="progress-bar hide" slot="progress-bar">
-              <div class="update-bar"></div>
-          </div>
-          <button slot="ar-button" class="ar-button">
-            View in your space
-          </button>
-          <div class="ar-prompt">
-              <img src="mushroom/ar_hand_prompt.png">
-          </div>
-        </model-viewer>
-      </div>
+    <h1>Welcome to PLANTastic!!</h1>
+    <h3>Your virtual plant-based website for plane enthusiasts</h3>
 
+      <div class="model-container">
+      <!-- Pilz -->
+       <div class="model-wrapper">
+        <div class="model-info">
+          <h4>mysterious mushroom: 4.45 $</h4>
+          </div>
+          <div id="pilz" class="model-item">
+            <model-viewer src="mushroom/mushroom_single.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls tone-mapping="neutral" poster="mushroom/poster.webp" shadow-intensity="1.17" exposure="1.48" shadow-softness="1" auto-rotate min-camera-orbit="auto auto 20.45m" min-field-of-view="30deg">
+              <div class="progress-bar hide" slot="progress-bar">
+                  <div class="update-bar"></div>
+              </div>
+              <button slot="ar-button" class="ar-button">
+              View in your space
+              </button>
+              <div class="ar-prompt">
+                  <img src="mushroom/ar_hand_prompt.png">
+              </div>
+            </model-viewer>
+            </div>
+            <div class="model-info bottom">
+                <p> A rare species of mushroom found in the depths of the forest.<br>
+                    <b>Abilities:</b> deep inner connection, stress reduction, yummy!! <br>
+                    <b>Side effects:</b> unknown </p>
+            </div>
+          </div>     
+        
       <!-- Rose -->
-      <div id="rose" class="model-item">
-        <model-viewer src="rose/rose.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls tone-mapping="neutral" poster="mushroom/poster.webp" shadow-intensity="1.17" exposure="1.48" shadow-softness="1" auto-rotate min-camera-orbit="auto auto 20.45m" min-field-of-view="30deg" autoplay>
-          <div class="progress-bar hide" slot="progress-bar">
-              <div class="update-bar"></div>
+          <div class="model-wrapper">
+        <div class="model-info">
+          <h4>very wet rose: 3.00 $ </h4>
           </div>
-          <button slot="ar-button" class="ar-button">
-            View in your space
-          </button>
-          <div class="ar-prompt">
-              <img src="mushroom/ar_hand_prompt.png">
-          </div>
-        </model-viewer>
-      </div>
-    </div>
+          <div id="rose" class="model-item">
+            <model-viewer src="rose/rose.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls tone-mapping="neutral" poster="mushroom/poster.webp" shadow-intensity="1.17" exposure="1.48" shadow-softness="1" auto-rotate min-camera-orbit="auto auto 20.45m" min-field-of-view="30deg">
+              <div class="progress-bar hide" slot="progress-bar">
+                  <div class="update-bar"></div>
+              </div>
+              <button slot="ar-button" class="ar-button">
+              View in your space
+              </button>
+              <div class="ar-prompt">
+                  <img src="mushroom/ar_hand_prompt.png">
+              </div>
+            </model-viewer>
+            </div>
+            <div class="model-info bottom">
+                <p> this is a very wet rose, that has been like this since it was picked<br>
+                    <b>Abilities:</b> strengths your love life (maybe too good) <br>
+                    <b>Side effects:</b> USE WITH CAUTION: you may be overrun by chicks (not only girls) </p>
+            </div>
+          </div>   
+    </div>         <!-- model-container -->
 
 
     <script src="./script.js"></script>
