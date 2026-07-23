@@ -1,6 +1,6 @@
 // Handles loading the events for <model-viewer>'s slotted progress bar
 
-customElements.whenDefined('model-viewer').then(() => {
+customElements.whenDefined('model-viewer').then(() => {                //skybox rotation
   const skyboxViewer = document.querySelector('#skybox-bg');
   
   if (!skyboxViewer) {
@@ -17,7 +17,14 @@ customElements.whenDefined('model-viewer').then(() => {
 });
 
 
-const onProgress = (event) => {
+document.querySelectorAll('model-viewer').forEach((viewer) => {           //???
+  if (viewer.querySelector('.progress-bar')) {
+    viewer.addEventListener('progress', onProgress);
+  }
+});
+
+
+const onProgress = (event) => {                                        //checking of models are loaded
   const progressBar = event.target.querySelector('.progress-bar');
   const updatingBar = event.target.querySelector('.update-bar');
   updatingBar.style.width = `${event.detail.totalProgress * 100}%`;
@@ -28,9 +35,8 @@ const onProgress = (event) => {
     progressBar.classList.remove('hide');
   }
 };
-document.querySelector('model-viewer').addEventListener('progress', onProgress);
 
-customElements.whenDefined('model-viewer').then(() => {
+customElements.whenDefined('model-viewer').then(() => {               //animated flower 
   const blume = document.querySelector('#animated-flower');
 
   blume.addEventListener('load', () => {
@@ -42,5 +48,7 @@ customElements.whenDefined('model-viewer').then(() => {
     blume.play({ repetitions: 1 });
   });
 });
+
+
 
 
