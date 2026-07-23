@@ -1,15 +1,9 @@
 // Handles loading the events for <model-viewer>'s slotted progress bar
- <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.3.1/model-viewer.min.js"></script>
 
 customElements.whenDefined('model-viewer').then(() => {
   const skyboxViewer = document.querySelector('#skybox-bg');
   
   if (!skyboxViewer) {
-    console.error('Skybox-Element nicht gefunden! Check die ID.');
-    return;
-  }
-  
-   if (!skyboxViewer) {
     console.error('Skybox-Element nicht gefunden!');
     return;
   }
@@ -18,6 +12,7 @@ customElements.whenDefined('model-viewer').then(() => {
   setInterval(() => {
     angle = (angle + 0.1) % 360;
     skyboxViewer.cameraOrbit = `${angle}deg 75deg auto`;
+    console.log('Aktueller Winkel:', angle);
   }, 50);
 });
 
