@@ -99,19 +99,27 @@
 
     </div>         <!-- model-container -->
 
-    <model-viewer id="animated-flower" src="animated_flower/animierte_blume.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls 
-      auto-rotate
-      animation-name="Blume_Aufblühen">
-      <div class="progress-bar hide" slot="progress-bar">
-          <div class="update-bar"></div>
-      </div>
-      <button slot="ar-button" class="ar-button">
-      View in your space
-      </button>
-      <div class="ar-prompt">
-          <img src="mushroom/ar_hand_prompt.png">
-      </div>
-    </model-viewer>
+
+    <div class="animation-container">
+      <model-viewer id="animated-flower" src="animate_flower/animierte_blume.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls 
+        exposure="0.001" shadow-intensity="1" shadow-softness="0.5"   
+        animation-name="Blume_Aufblühen">
+        <div class="progress-bar hide" slot="progress-bar">
+            <div class="update-bar"></div>
+        </div>
+        <button slot="ar-button" class="ar-button">
+        View in your space
+        </button>
+        <div class="ar-prompt">
+            <img src="mushroom/ar_hand_prompt.png">
+        </div>
+      </model-viewer>
+    </div> <!-- animation-container -->
+
+    <div id="button-off-website">
+
+      
+    </div>
 
 
     <script src="./script.js"></script>

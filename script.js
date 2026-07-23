@@ -12,16 +12,9 @@ customElements.whenDefined('model-viewer').then(() => {                //skybox 
   setInterval(() => {
     angle = (angle + 0.1) % 360;
     skyboxViewer.cameraOrbit = `${angle}deg 75deg auto`;
-    console.log('Aktueller Winkel:', angle);
   }, 50);
 });
 
-
-document.querySelectorAll('model-viewer').forEach((viewer) => {           //???
-  if (viewer.querySelector('.progress-bar')) {
-    viewer.addEventListener('progress', onProgress);
-  }
-});
 
 
 const onProgress = (event) => {                                        //checking of models are loaded
@@ -42,12 +35,16 @@ customElements.whenDefined('model-viewer').then(() => {               //animated
   blume.addEventListener('load', () => {
     // Zum Testen: zeigt dir alle verfügbaren Animationsnamen in der Konsole
     console.log('Verfügbare Animationen:', blume.availableAnimations);
+  
   });
 
   blume.addEventListener('click', () => {
+    console.log('Blume wurde angeklickt!');
+    blume.animationName = 'Scene';
     blume.play({ repetitions: 1 });
   });
 });
+
 
 
 

@@ -149,6 +149,25 @@ h3 {
   height: 500px;
 }
 
+.animation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+  padding: 1.5rem;
+  width:  100vw;
+  height: 100vh;
+}
+
+
+#animated-flower {
+  width: 150%;
+  height: 150%;
+  pointer-events: auto;
+}
+
+
+
 .progress-bar {
   display: block;
   width: 33%;
