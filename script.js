@@ -30,4 +30,17 @@ const onProgress = (event) => {
 };
 document.querySelector('model-viewer').addEventListener('progress', onProgress);
 
+customElements.whenDefined('model-viewer').then(() => {
+  const blume = document.querySelector('#animated-flower');
+
+  blume.addEventListener('load', () => {
+    // Zum Testen: zeigt dir alle verfügbaren Animationsnamen in der Konsole
+    console.log('Verfügbare Animationen:', blume.availableAnimations);
+  });
+
+  blume.addEventListener('click', () => {
+    blume.play({ repetitions: 1 });
+  });
+});
+
 

@@ -99,6 +99,20 @@
 
     </div>         <!-- model-container -->
 
+    <model-viewer id="animated-flower" src="animated_flower/animated_flower.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls 
+      auto-rotate
+      animation-name="Blume_Aufblühen">
+      <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" class="ar-button">
+      View in your space
+      </button>
+      <div class="ar-prompt">
+          <img src="mushroom/ar_hand_prompt.png">
+      </div>
+    </model-viewer>
+
 
     <script src="./script.js"></script>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.3.1/model-viewer.min.js"></script>
