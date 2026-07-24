@@ -8,7 +8,7 @@ customElements.whenDefined('model-viewer').then(() => {                //skybox 
     return;
   }
 
-  document.addEventListener("click", () => {
+  document.addEventListener('click', () => {
     const musik = document.getElementById("hg-musik");
     musik.play(); 
 }, { once: true });
