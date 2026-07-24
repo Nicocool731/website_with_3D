@@ -9,6 +9,7 @@
   </head>
   <body>
 
+    <audio id="hg-musik" loop src="musik/chakra.mp3"></audio>
     <h1>Welcome to PLANTastic!!</h1>
     <h3>Your virtual plant-based website for plant enthusiasts</h3>
 
@@ -53,7 +54,7 @@
               <h4> a ordinary flower(?): FREE </h4>
             </div>
             <div id="blume" class="model-item">
-              <model-viewer src="blume/blume.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls tone-mapping="neutral" poster="mushroom/poster.webp" shadow-intensity="1.17" exposure="1.48" shadow-softness="1" auto-rotate min-camera-orbit="auto auto 20.45m" min-field-of-view="30deg">
+              <model-viewer src="blume/blume.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls tone-mapping="neutral" poster="blume/blume.webp" shadow-intensity="1.17" exposure="1.48" shadow-softness="1" auto-rotate min-camera-orbit="auto auto 20.45m" min-field-of-view="30deg">
                 <div class="progress-bar hide" slot="progress-bar">
                     <div class="update-bar"></div>
                 </div>
@@ -77,7 +78,7 @@
               <h4>very wet rose: 3.00 $ </h4>
             </div>
             <div id="rose" class="model-item">
-              <model-viewer src="rose/rose.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls tone-mapping="neutral" poster="mushroom/poster.webp" shadow-intensity="1.17" exposure="1.48" shadow-softness="1" auto-rotate min-camera-orbit="auto auto 20.45m" min-field-of-view="30deg">
+              <model-viewer src="rose/rose.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls tone-mapping="neutral" poster="rose/rose.webp" shadow-intensity="1.17" exposure="1.48" shadow-softness="1" auto-rotate min-camera-orbit="auto auto 20.45m" min-field-of-view="30deg">
                 <div class="progress-bar hide" slot="progress-bar">
                     <div class="update-bar"></div>
                 </div>
@@ -101,8 +102,8 @@
 
 
     <div class="animation-container">
-      <model-viewer id="animated-flower" src="animate_flower/animierte_blume.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls 
-        exposure="0.001" shadow-intensity="1" shadow-softness="0.5"   
+      <model-viewer id="animated-flower" src="animate_flower/animierte_blume.glb" poster="animate_flower/animate.webp" ar ar-modes="scene-viewer webxr quick-look" camera-controls 
+        exposure="0.001" shadow-intensity="1" shadow-softness="0.5" 
         animation-name="Blume_Aufblühen">
         <div class="progress-bar hide" slot="progress-bar">
             <div class="update-bar"></div>
@@ -116,10 +117,8 @@
       </model-viewer>
     </div> <!-- animation-container -->
 
-    <div id="button-off-website">
 
-      
-    </div>
+        <a id="weiter-link" href="neue_seite.html" class="website-button hide">CLICK ME!!!</a> 
 
 
     <script src="./script.js"></script>

@@ -153,19 +153,55 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 2rem;
-  padding: 1.5rem;
+  padding-top: 3rem;
+  padding: 0.5rem;
   width:  100vw;
   height: 100vh;
 }
 
 
 #animated-flower {
-  width: 150%;
-  height: 150%;
+  width: 125%;
+  height: 125%;
   pointer-events: auto;
 }
 
+.website-button {
+  display: inline-block;
+  translate: 250px -400px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4e0505;
+  color: #dbdec6;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border-radius: 8px;
+  font-family: 'nature green', sans-serif;
+  transition: opacity 0.5s ease, transform 1s ease;
+  position: relative;   /* NEU */
+  z-index: 10;          /* NEU: höher als das model-viewer */
+}
+
+.website-button.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.website-button:hover {
+  opacity: 0.8;
+  transform: scale(1.5); 
+}
+
+
+#video{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;   /* füllt den Bildschirm, ohne das Video zu verzerren */
+  z-index: -1;
+}
 
 
 .progress-bar {
