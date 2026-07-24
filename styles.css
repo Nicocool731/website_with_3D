@@ -136,8 +136,15 @@ h3 {
 #pilz {
   width: 500px;
   height: 500px;
-  z-index:10;
 }
+
+#pilz2 {
+  width: 500px;
+  height: 500px;
+  z-index: 10;
+  translate: 480px 100px;
+}
+
 
 
 #blume {
