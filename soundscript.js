@@ -14,10 +14,11 @@ const onProgress = (event) => {                                        //checkin
 document.querySelector('model-viewer').addEventListener('progress', onProgress);
 
 
-
 const sound = new Audio("musik/psy.mp3");
+const image = document.querySelector('#pilz2');  
 
-sound.addEventListener('click', () => {
+image.addEventListener('click', () => {
+    console.log('Bild wurde geklickt!');
     sound.currentTime = 0;
     sound.play().catch(error => {
         console.error("The sound could not be played:", error);
