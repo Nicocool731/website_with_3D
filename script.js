@@ -36,6 +36,7 @@ const onProgress = (event) => {                                        //checkin
     progressBar.classList.remove('hide');
   }
 };
+document.querySelector('model-viewer').addEventListener('progress', onProgress);
 
 customElements.whenDefined('model-viewer').then(() => {               //animated flower 
   const blume = document.querySelector('#animated-flower');
