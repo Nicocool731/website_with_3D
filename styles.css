@@ -200,9 +200,15 @@ h3 {
   width: 100vw;
   height: 100vh;
   object-fit: cover;   /* füllt den Bildschirm, ohne das Video zu verzerren */
-  z-index: -1;
+  z-index: -2;
 }
 
+#cat {
+  justify-content: center;
+  width: 800px;
+  height: 800px;
+
+}
 
 .progress-bar {
   display: block;
