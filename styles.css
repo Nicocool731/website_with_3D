@@ -136,6 +136,7 @@ h3 {
 #pilz {
   width: 500px;
   height: 500px;
+  z-index:10;
 }
 
 
@@ -200,7 +201,7 @@ h3 {
   width: 100vw;
   height: 100vh;
   object-fit: cover;   /* füllt den Bildschirm, ohne das Video zu verzerren */
-  z-index: -2;
+  z-index: 0;
 }
 
 #cat {
